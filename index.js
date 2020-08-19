@@ -59,9 +59,24 @@ person.age= 33;
 // The Array definition
 let selectedColor = [];
 
+
+// In array we can add Some thing to the beginning of the array with (array.unshift())
+let arr1 = [1 , 2 , 3 , 4 ];
+arr1.unshift(5);
+console.log(arr1)
+// In array we can add Some thing to the end of the array with (array.push())
+arr1.push(32)
+console.log(arr1)
+// In array we can delete the first element of the array with (array.shift())
+arr1.shift();
+console.log(arr1)
+// In array we can delete the last element of the array with (array.pop())
+arr1.pop();
+console.log(arr1)
+
 // Add to array
 selectedColor[selectedColor.length] = 1;
-selectedColor[selectedColor.length] = 'green';
+selectedColor[selectedColor.length] = 'red';
 console.log(selectedColor);
 
 // The nested array 
