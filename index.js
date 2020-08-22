@@ -93,6 +93,8 @@ var arr = [1 , 2 , 4 , 45 ,90];
 console.log(JSON.stringify(arr))
 
 // The Condition Of JS (Like Other Lang ...)
+// In the 2 equal the type of data is not important 
+// But in 3 equal condition is important 
 if(3 === '3'){
     console.log('ooh')
 }
