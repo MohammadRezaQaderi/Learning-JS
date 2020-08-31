@@ -95,6 +95,7 @@ console.log(JSON.stringify(arr))
 // The Condition Of JS (Like Other Lang ...)
 // In the 2 equal the type of data is not important 
 // But in 3 equal condition is important 
+
 if(3 === '3'){
     console.log('ooh')
 }
@@ -102,3 +103,30 @@ if(3 === '3'){
 if(3 == '3'){
     console.log('yeah')
 }
+
+// In The If && else If condition the order is very important
+
+
+// The Switch and Case Statement
+// If we Want to have Answer in all test for switch case we should to define default in end of cases
+
+function caseInSwitch(val){
+    var answer="";
+    switch(val){
+        case 1: 
+            answer='alpha'
+            break;
+        case 2:
+            answer='beta'
+            break;
+        case 3:
+            answer='gama'
+            break;
+        default :
+            answer='mamad'
+            break;
+    }
+    return answer;
+}
+
+console.log(caseInSwitch(2))
