@@ -130,3 +130,51 @@ function caseInSwitch(val){
 }
 
 console.log(caseInSwitch(2))
+
+//The Object Design in JS
+var myLabtop = {
+    "Name": 'Asus',
+    "CPU": "CORE i5",
+    "RAM": 4,
+    Graphic: 2,
+    "friend": []
+};
+
+// Accessing the objects properties with dot Notataion
+let CPU = myLabtop.CPU;
+console.log(CPU)
+
+// Accessing the objects properties with Bracket
+let RAM = myLabtop['Graphic']
+console.log(RAM)
+
+// Updating the Properties
+myLabtop.Name = 'MacBook'
+console.log(myLabtop)
+
+// Add new Properties
+myLabtop.battery = '3x';
+// or myLabtop['battery'] = '3x'
+console.log(myLabtop)
+
+// Delete Properties from objects
+delete myLabtop.friend;
+
+function lookup(val){
+    var result=''
+
+    var lookup ={
+        'ali': 133,
+        'mohammad': 144,
+        'abbas': 156,
+        'zahra':179
+    };
+
+    result = lookup[val]
+    return result;
+}
+
+console.log(lookup('zahra'))
+
+// check the have properties 
+console.log(myLabtop.hasOwnProperty('ali'))
