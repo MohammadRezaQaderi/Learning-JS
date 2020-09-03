@@ -198,7 +198,7 @@ var Music = [
 ];
 
 // Nested Object
-var myCar={
+var myCar = {
     "car": {
         "inside":{
             "glove box": "map",
@@ -214,18 +214,18 @@ var gloveBoxContent = myCar.car.inside["glove box"];
 console.log(gloveBoxContent)
 
 // Nested Array And Accessing to that tree
-var myPlants =[
+var myPlants = [
     {
-        types = "flowers",
-        list = [ 
+        types : "flowers",
+        list : [ 
             "rose",
             "tulip",
             "dandelion"
         ]
     },
     {
-        types = "trees",
-        list = [
+        types : "trees",
+        list : [
             "fir",
             "pin",
             "brich"
@@ -236,4 +236,74 @@ var myPlants =[
 var theSecondSecond = myPlants[0].list[0]
 console.log(theSecondSecond)
 
-console.log()
+var collection = {
+    "2548": {
+        "album": "Jahanam",
+        "artist": "tataloo",
+        "tracks": [
+            "miram",
+            "jahanam",
+            "Beshmar",
+            "Sadi Chand"
+        ]
+    },
+
+    "44587": {
+        "album": "Barzakh",
+        "artist": "tataloo",
+        "tracks": [
+            "Navazesh2",
+            "Ajab",
+            "Barzakh",
+            "Khar"
+        ]
+    },
+
+    "1131": {
+        "album": "78",
+        "artist": "tataloo",
+        "tracks": [
+            "MR Lodeh",
+            "Khanom Vaziri",
+            "Man 3",
+            "Afee"
+        ]
+    },
+
+    "3105": {
+        "album": "Sheytan",
+        "artist": "tataloo",
+        "tracks": [
+            "Ajab 2",
+            "Alo 3",
+            "Ye Saram be ma bezan"
+        ]
+    },
+
+
+};
+
+
+// Make copy from collection
+var collectionCopy = JSON.parse(JSON.stringify(collection));
+console.log(collectionCopy)
+
+function updateRecords(id , property , value ){
+    // if we want to delete the collection id set the value empty
+    if(value === ""){
+        delete collection[id][property];
+    }
+
+    else if(property === "tracks"){
+        collection[id][property] = collection[id][property] || [];
+        collection[id][property].push(value);
+    }
+
+    else{
+        collection[id][property] = value;
+    }
+    return collection;
+}
+
+// TEST
+console.log(updateRecords(1131 , "tracks" , "Amir Tataloo"))
