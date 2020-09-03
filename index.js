@@ -194,5 +194,4 @@ var Music = [
         "titel": "Pop",
         "release_year": 2019
     },
-
 ];
