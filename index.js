@@ -212,3 +212,28 @@ var myCar={
 
 var gloveBoxContent = myCar.car.inside["glove box"];
 console.log(gloveBoxContent)
+
+// Nested Array And Accessing to that tree
+var myPlants =[
+    {
+        types = "flowers",
+        list = [ 
+            "rose",
+            "tulip",
+            "dandelion"
+        ]
+    },
+    {
+        types = "trees",
+        list = [
+            "fir",
+            "pin",
+            "brich"
+        ]
+    }
+];
+
+var theSecondSecond = myPlants[0].list[0]
+console.log(theSecondSecond)
+
+console.log()
