@@ -145,6 +145,7 @@ let CPU = myLabtop.CPU;
 console.log(CPU)
 
 // Accessing the objects properties with Bracket
+// /**if the attribute name have space we should use bracket**/
 let RAM = myLabtop['Graphic']
 console.log(RAM)
 
@@ -195,3 +196,19 @@ var Music = [
         "release_year": 2019
     },
 ];
+
+// Nested Object
+var myCar={
+    "car": {
+        "inside":{
+            "glove box": "map",
+            "passenger seat": "crumbs"
+        },
+        "outside":{
+            "trunk": "junk"
+        }
+    }
+};
+
+var gloveBoxContent = myCar.car.inside["glove box"];
+console.log(gloveBoxContent)
