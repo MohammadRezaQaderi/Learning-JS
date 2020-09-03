@@ -327,3 +327,31 @@ for(var i = 0;i < 10 ; i+=2 ){
     myAray.push(i)
 }
 console.log(myAray)
+
+// Nesting loop (in to in)
+
+function multiplyAll(arr){
+    var product = 1
+    for(var i = 0 ; i < arr.length ; i++){
+        for(var j = 0 ; j < arr[i].length ; j++)
+            product *=arr[i][j]
+    }
+
+    return product;
+}
+
+ product = multiplyAll([[1 , 2] , [3 , 4] , [5 , 6 , 7]])
+ console.log(product)
+
+
+ // Do While (like While but it run one time exactly)
+
+ myAray = []
+ i = 15
+
+ do{
+     myAray.push(i)
+     i--;
+ } while(i < 5)
+
+ console.log(myAray)
