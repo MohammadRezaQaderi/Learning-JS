@@ -178,3 +178,21 @@ console.log(lookup('zahra'))
 
 // check the have properties 
 console.log(myLabtop.hasOwnProperty('ali'))
+
+// Manipulating Object
+var Music = [
+    {
+        // the first object 
+        "artist": "Tataloo",
+        "titel": "Rap",
+        "release_year": 2020
+    },
+
+    {
+        // the first object 
+        "artist": "Reza Sadeghi",
+        "titel": "Pop",
+        "release_year": 2019
+    },
+
+];
