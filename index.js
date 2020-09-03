@@ -355,3 +355,37 @@ function multiplyAll(arr){
  } while(i < 5)
 
  console.log(myAray)
+
+ // Array of Objects
+
+ var contacts = [
+     {
+        "firstName": "ali",
+        "lastName": "Oftadeh",
+        "number": "091212131",
+        "likes": ["ali" , "food" , "travel"]
+     },
+     {
+        "firstName": "reza",
+        "lastName": "JamehBolandi",
+        "number":   "09190701416",
+        "likes": ["car" , "travel" , "firend"]
+     },
+     {
+        "firstName": "pouya",
+        "lastName": "baqeri",
+        "number": "0902200212",
+        "likes": ["girl" , "jave" , "Chiz"]
+     }
+ ];
+
+ function lookUpProfilo(name , property){
+     for(var i = 0 ; i < contacts.length ; i++){
+         if(contacts[i].firstName === name){
+            return contacts[i][property] || "Properties Not Found"
+         }
+     }
+     return "Contact Not Found"
+ }
+
+ console.log(lookUpProfilo("ali" , "likes"))
