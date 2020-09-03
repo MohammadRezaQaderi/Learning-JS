@@ -307,3 +307,23 @@ function updateRecords(id , property , value ){
 
 // TEST
 console.log(updateRecords(1131 , "tracks" , "Amir Tataloo"))
+
+// Iterate with Loop
+
+// While
+
+var myAray = [];
+ var i = 0
+ while(i < 5){
+     myAray.push(i)
+     i++
+ }
+console.log(myAray)
+
+// For
+// odd number
+myAray = []
+for(var i = 0;i < 10 ; i+=2 ){
+    myAray.push(i)
+}
+console.log(myAray)
