@@ -487,4 +487,16 @@ const squareList = (arr) => {
 const squaredIntegers = squareList(realNumber)
 console.log(squaredIntegers)
 
-// write higher order arrow function 
+
+// write higher order arrow function
+
+const increment = (function(){
+    return function increment(number = 4 , value = 1){
+        return number  + value ;
+    }
+})();
+console.log(increment(5))
+// in structer of the increment function if 1 var put the value is equal to one
+// in other way the value is equal to the second variable 
+console.log(increment(5 , 2))
+console.log(increment())
