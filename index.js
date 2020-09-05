@@ -496,7 +496,17 @@ const increment = (function(){
     }
 })();
 console.log(increment(5))
+
 // in structer of the increment function if 1 var put the value is equal to one
 // in other way the value is equal to the second variable 
 console.log(increment(5 , 2))
 console.log(increment())
+
+// Rest operation 
+// we use this form to add any number that we need
+const sum = (function(){
+    return function sum(...args){
+        return args.reduce((a , b) => a + b , 0) 
+    }
+})();
+console.log(sum(1 , 2 , 3 , 4))
