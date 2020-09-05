@@ -465,3 +465,26 @@ function freezeObj(){
 }
 var PI = freezeObj();
 console.log(PI)
+
+// Anonymous Function
+// var magic = function() ...
+// Ex. var magic = () => new Data();
+
+var myConcat = (arr3 , arr4) => arr3.concat(arr4);
+
+console.log(myConcat([1 , 2] , [3 , 4 , 5]))
+
+// write higher order arrow function 
+
+const realNumber = [ 4 , 2.65 , 3.14 , -9.325 ,  6 , -2 ]
+
+const squareList = (arr) => {
+    // the arrow using more and x is the element in array
+    const squaredInteger = arr.filter ( num => Number.isInteger(num) && num > 0).map(x => x*x)
+    return squaredInteger
+}
+
+const squaredIntegers = squareList(realNumber)
+console.log(squaredIntegers)
+
+// write higher order arrow function 
