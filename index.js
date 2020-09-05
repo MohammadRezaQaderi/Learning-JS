@@ -396,8 +396,72 @@ function multiplyAll(arr){
  
  // another form for condition
  // condition ? statement-if-true : statement-if-false;
+
  function checkSign(num){
      return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
  } 
 
  console.log(checkSign(0))
+
+ // The Defrences of the Let And Var decleration
+ // in var decelaretion we can reuse the variable
+ // but the let we can`t use the same name variable 
+
+ // the other defrences is in scope of using
+ // the the var is for all of code envierment
+ // but the let in that experition scope (Block)
+
+ function checkScope(){
+     "use strict";
+     var i = "function scope"
+     if(true){
+        // for see deferent uncomment the line and cooment other line
+        // i = "block Scope"
+         let i = "block Scope"
+         console.log(i)
+     }
+     console.log(i)
+ }
+
+ checkScope();
+
+// if you can declare read only variable use const 
+// it is very like let but we can not change it
+// when use const is better to name CAPITAL
+
+// but in array we have
+
+const ARRAYS = [2 , 5 , 8]
+var arrays1 = [2 , 5 , 8]
+
+function editInplace(){
+    "use strict";
+    arrays1 = [8 , 2 , 5]
+    // in this way we have error
+    //ARRAYS = [5 , 2 ,8]
+    ARRAYS[0] = 5
+    ARRAYS[1] = 2 
+    ARRAYS[2] = 8 
+}
+editInplace()
+console.log(ARRAYS)
+console.log(arrays1)
+
+// use Object Freeze
+
+function freezeObj(){
+    "use strict";
+    const MATH_CONSTANTS = {
+        PI : 3.14
+    };
+    Object.freeze(MATH_CONSTANTS);
+    try {
+        MATH_CONSTANTS.PI =3.141592
+    } catch (error) {
+        console.log(error)        
+    }
+
+    return MATH_CONSTANTS.PI;
+}
+var PI = freezeObj();
+console.log(PI)
