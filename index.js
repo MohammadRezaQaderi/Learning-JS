@@ -389,3 +389,15 @@ function multiplyAll(arr){
  }
 
  console.log(lookUpProfilo("ali" , "likes"))
+
+ // redix pasin (in 2 case)
+
+ console.log(parseInt(10011, 2))
+ 
+ // another form for condition
+ // condition ? statement-if-true : statement-if-false;
+ function checkSign(num){
+     return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+ } 
+
+ console.log(checkSign(0))
