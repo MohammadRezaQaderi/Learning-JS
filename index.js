@@ -523,3 +523,11 @@ let arr2 ;
     ARR1[0]= "ali"
 })();
 console.log(arr2)
+
+// The read and write to object and variable
+var voxel = {x: 3.6 , y: 4.5 , z:8.26}
+var x = voxel.x;
+var y = voxel.y;
+var z = voxel.z;
+
+const {x:a , y:b , z:c} = voxel; // a = 3.6 , b = 4.5 , c = 8.26
