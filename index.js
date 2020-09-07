@@ -546,7 +546,7 @@ const AVG_TEMPER = {
 
 function getTomTemper(avgTempTomorrow){
     "use stirct";
-    // we get the tomorrow temp and assign to the temp of tomorrow
+    // we get the tomorrow temp variable from AVG_TEMPER and assign to the temp of tomorrow
     const {tomorrow : tempOfTomorrow} = avgTempTomorrow;
     return tempOfTomorrow;
 }
