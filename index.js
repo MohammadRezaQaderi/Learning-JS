@@ -581,3 +581,16 @@ let aa = 88 , bb = 66;
 )()
 
 console.log(aa , bb)
+
+//  use rest to cut array
+
+const aray = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10]
+
+function removeFirstTwo(list){
+
+    const [ , , ...arr] = list
+    return arr
+}
+
+const arr7 = removeFirstTwo(aray)
+console.log(arr7)
