@@ -594,3 +594,18 @@ function removeFirstTwo(list){
 
 const arr7 = removeFirstTwo(aray)
 console.log(arr7)
+
+// send the object 2 way one with . and one is
+
+const state = {
+    max : 50.68,
+    min : 89.5,
+    mode : 55.6
+}
+
+const half =(function(){
+    return function half({min , max}){
+        return (min + max)/2.0
+    };
+})();
+console.log(half(state));
