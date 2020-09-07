@@ -552,3 +552,18 @@ function getTomTemper(avgTempTomorrow){
 }
 
 console.log(getTomTemper(AVG_TEMPER))
+
+// destructuring assignment with nested object
+
+const LOCAL_FORCAST = {
+    today : {min: 72 , max:74},
+    tomorrow: {min:76 , max:79.5}
+}
+
+function getMaxOfTemp(forcast){
+    "use strict";
+    const{tomorrow  : { min :maxOfTomo } } = forcast;  
+    return maxOfTomo;
+}
+
+console.log(getMaxOfTemp(LOCAL_FORCAST))
