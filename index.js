@@ -567,3 +567,17 @@ function getMaxOfTemp(forcast){
 }
 
 console.log(getMaxOfTemp(LOCAL_FORCAST))
+
+// use to assign to array 
+
+const [n , m , , , o] = [1 , 2 , 3 , 4 , 5]
+console.log(n , m , o)
+
+// let have nice swap
+let aa = 88 , bb = 66;
+(() =>{
+    [aa , bb] = [bb , aa];
+}
+)()
+
+console.log(aa , bb)
