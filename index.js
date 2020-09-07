@@ -499,11 +499,13 @@ console.log(increment(5))
 
 // in structer of the increment function if 1 var put the value is equal to one
 // in other way the value is equal to the second variable 
+
 console.log(increment(5 , 2))
 console.log(increment())
 
 // Rest operation 
 // we use this form to add any number that we need
+
 const sum = (function(){
     return function sum(...args){
         return args.reduce((a , b) => a + b , 0) 
@@ -513,6 +515,7 @@ console.log(sum(1 , 2 , 3 , 4))
 
 
 // the different of the array to copy to other array or make path to them 
+
 const ARR1 = ["JAN","FEB","MAR","APR","MAY"]
 let arr2 ;
 (function(){
@@ -525,9 +528,27 @@ let arr2 ;
 console.log(arr2)
 
 // The read and write to object and variable
+
 var voxel = {x: 3.6 , y: 4.5 , z:8.26}
 var x = voxel.x;
 var y = voxel.y;
 var z = voxel.z;
 
 const {x:a , y:b , z:c} = voxel; // a = 3.6 , b = 4.5 , c = 8.26
+
+
+// the use of const Object
+
+const AVG_TEMPER = {
+    today:77 ,
+    tomorrow: 79.5
+}
+
+function getTomTemper(avgTempTomorrow){
+    "use stirct";
+    // we get the tomorrow temp and assign to the temp of tomorrow
+    const {tomorrow : tempOfTomorrow} = avgTempTomorrow;
+    return tempOfTomorrow;
+}
+
+console.log(getTomTemper(AVG_TEMPER))
