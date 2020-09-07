@@ -510,3 +510,16 @@ const sum = (function(){
     }
 })();
 console.log(sum(1 , 2 , 3 , 4))
+
+
+// the different of the array to copy to other array or make path to them 
+const ARR1 = ["JAN","FEB","MAR","APR","MAY"]
+let arr2 ;
+(function(){
+    // make path of arr1 to arr2   
+    arr2 = ARR1;
+    // make copy of arr1 to arr2
+    arr2 = [...ARR1]
+    ARR1[0]= "ali"
+})();
+console.log(arr2)
